@@ -13,3 +13,4 @@
 * Hyprland-like animations in BSPWM using picom
 * WIP - EWW Dashboard
 * Aesthetic bar config
+* Switch between Light & Dark mode in a click of a button!
