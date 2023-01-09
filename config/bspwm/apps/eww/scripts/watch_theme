@@ -1,0 +1,10 @@
+#!/bin/bash
+
+FILE=~/.cache/cached_theme
+
+if grep -q "dark" "$FILE"
+  then
+    echo "light"
+  else
+    echo "dark"
+fi

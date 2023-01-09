@@ -1,0 +1,24 @@
+#!/bin/bash
+
+FILE="$HOME/.cache/cached_theme"
+KITTY="$HOME/.config/bspwm/apps/kitty/kitty.conf"
+BAR="$HOME/.config/bspwm/apps/polybar/config.ini"
+
+if [[ ! -f "$FILE" ]]; then
+  touch "$FILE"
+fi
+
+if grep -q "dark" "$FILE"; then
+  # DO LIGHT THEME HERE
+  sed -i '/include/c\include ~\/.config\/bspwm\/apps\/kitty\/colors\/latte.conf' $KITTY
+  sed -i '/include-file=~\/.config\/bspwm\/apps\/polybar\/colors/c\include-file=~\/.config\/bspwm\/apps\/polybar\/colors\/latte.ini' $BAR
+  xdotool key ctrl+shift+F5
+  bspc wm -r
+  echo "light" > $FILE
+else
+  sed -i '/include/c\include ~\/.config\/bspwm\/apps\/kitty\/colors\/mocha.conf' $KITTY
+  sed -i '/include-file=~\/.config\/bspwm\/apps\/polybar\/colors/c\include-file=~\/.config\/bspwm\/apps\/polybar\/colors\/mocha.ini' $BAR
+  xdotool key ctrl+shift+F5
+  bspc wm -r
+  echo "dark" > $FILE
+fi

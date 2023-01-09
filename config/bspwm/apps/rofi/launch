@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rofi -show drun -theme ~/.config/bspwm/apps/rofi/config.rasi

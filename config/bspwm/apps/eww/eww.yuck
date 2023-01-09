@@ -1,0 +1,54 @@
+(defwidget dashboard []
+  (box :orientation "v"
+    :class "dashboard"
+    :space-evenly "false"
+  (box :orientation "v"
+    :space-evenly "false"
+    (profile)
+    (theme_switch)
+    )))
+
+(defpoll NAME :interval "5m" "whoami")
+(defpoll SWITCH_THEME :interval "1s" "~/.config/bspwm/apps/eww/scripts/watch_theme")
+
+(defwidget profile []
+  (box 
+    :orientation "h"
+    :space-evenly "false"
+    :class "pfp" 
+    (label 
+      :text "Welcome ${NAME}"
+      :class "name"
+      )
+  )  
+)
+
+(defwidget theme_switch []
+  (box
+    :orientation "h"
+    :space-evenly "false"
+    :class "theme_switcher"
+    (button
+      :class "switch_theme_btn"
+      :onclick "~/.config/bspwm/apps/eww/scripts/switch_theme"
+      "Switch to ${SWITCH_THEME} mode"
+    )
+  )
+)
+
+(defwidget test1 []
+  (label
+    :text "Test1"
+    )
+  )
+
+(defwindow dashboard
+    :monitor 0
+    :geometry (geometry :x "20"
+                        :y "80"
+                        :height "30%"
+                        :width "15%"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+(dashboard))

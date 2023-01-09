@@ -1,0 +1,36 @@
+@import 'colors/mocha';
+
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+}
+
+//Global Styles
+.dashboard {
+  background-color: $base;
+  color: $text;
+  padding: 10px;
+}
+
+.name {
+  font-family: Iosevka Nerd Font;
+  font-weight: Bold;
+  font-size: 2em;
+  padding-left: 5.5em;
+  padding-bottom: 6em;
+}
+
+.pfp {
+  background-image: url("assets/pfp.png");
+  background-repeat: no-repeat;
+  background-size:10rem;
+  min-height: 240px;
+  min-width: 240px;
+}
+
+.switch_theme_btn {
+  background-color: $text;
+  color: $base;
+  border-radius: 20px;
+  font-size: 1em;
+  padding: 10px;
+}

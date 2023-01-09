@@ -1,0 +1,12 @@
+#!/bin/sh
+
+FILE="$HOME/.cache/eww_launch.dashboard"
+EWW=`which eww`
+
+if [[ ! -f "$FILE" ]]; then
+	touch "$FILE"
+  eww -c ~/.config/bspwm/apps/eww/ open dashboard
+else
+	${EWW} -c ~/.config/bspwm/apps/eww/ close dashboard
+	rm "$FILE"
+fi
