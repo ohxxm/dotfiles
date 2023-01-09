@@ -1,7 +1,7 @@
 <h1 align="center">WIP Dotfiles</h1>
 
 <h3 align="center">If you decide to use my config, please do give me credit in the README of your fork/repo.</center>
-
+<br>
 | Feature              | Package                                                 |
 | -------------------- | ------------------------------------------------------- |
 | Window Manager       | [`bspwm`](https://github.com/baskerville/bspwm)         |
