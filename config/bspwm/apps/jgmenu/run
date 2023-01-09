@@ -1,0 +1,8 @@
+#!/bin/bash
+
+base=~/.config/bspwm/apps/jgmenu
+
+menu_file=$base/menu.txt
+conf_file=$base/jgmenurc
+
+jgmenu --csv-file=$menu_file --config-file=$conf_file

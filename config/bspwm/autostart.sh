@@ -12,4 +12,4 @@ dunst -config ~/.config/bspwm/apps/dunst/dunstrc &
 
 eww daemon &
 
-~/.fehbg &
+nitrogen --restore &

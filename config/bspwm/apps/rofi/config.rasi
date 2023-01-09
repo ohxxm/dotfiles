@@ -265,7 +265,7 @@ mode-switcher{
 button {
     padding:                     5px 10px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               20px;
     border-color:                @border-colour;
     background-color:            @alternate-background;
     text-color:                  inherit;
