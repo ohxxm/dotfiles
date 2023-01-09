@@ -7,6 +7,7 @@
 
 # Install
 **This command may overwrite your config files**
+<br>
 ```cp -rf config/* ~/.config/```
 
 # Features
