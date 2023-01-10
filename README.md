@@ -21,10 +21,9 @@
 
 **This command may overwrite your config files**
 <br>
-```cp -rf config/* ~/.config/ 
-   cp home/* ~/
-   cp bin/* /usr/local/bin/
-```
+```cp -rf config/* ~/.config/``` 
+```cp home/* ~/```
+```cp bin/* /usr/local/bin/```
 **The last command may require superuser permissions**
 
 # Features
