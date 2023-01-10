@@ -20,7 +20,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import "colors/latte.rasi"
+@import "colors/mocha.rasi"
 @import "fonts.rasi"
 
 * {

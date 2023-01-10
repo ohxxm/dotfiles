@@ -1,0 +1,18 @@
+Change Wallpaper,nitrogen,nitrogen
+Randomize Wallpaper,nitrogen --set-zoom-fill --save --random ~/walls_upscaled/,photo
+^sep()
+
+Terminal,kitty --config ~/.config/bspwm/apps/kitty/kitty.conf,kitty
+Neovim,kitty --config ~/.config/bspwm/apps/kitty/kitty.conf -e nvim,nvim
+File Manager,nemo,nemo
+^sep()
+
+Restart BSPWM,bspc wm -r,input-keyboard 
+Restart SXHKD,killall sxhkd && bspc wm -r,input-keyboard
+
+Exit,^checkout(exit)
+
+^tag(exit)
+Suspend,systemctl suspend,system-suspend
+Reboot,reboot,system-reboot
+Poweroff,poweroff,system-shutdown

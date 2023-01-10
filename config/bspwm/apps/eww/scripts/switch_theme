@@ -8,6 +8,7 @@ ROFI="$HOME/.config/bspwm/apps/rofi/config.rasi"
 NEOVIM="$HOME/.config/nvim/lua/user/colorscheme.lua"
 EWW="$HOME/.config/bspwm/apps/eww/eww.scss"
 DUNST="$HOME/.config/bspwm/autostart.sh"
+JGMENU="$HOME/.config/bspwm/apps/jgmenu/run"
 
 if [[ ! -f "$FILE" ]]; then
   touch "$FILE"
@@ -22,6 +23,8 @@ if grep -q "Dark" "$FILE"; then
   sed -i '/flavour = "/c\flavour = "latte"' $NEOVIM
   sed -i "/@import 'colors\//c\@import 'colors\/latte';" $EWW
   sed -i "/dunst -config/c\dunst -config ~\/.config\/bspwm\/apps\/dunst\/latte-dunstrc &" $DUNST
+  sed -i "/conf_file=/c\conf_file=\$base/latte-jgmenurc" $JGMENU
+  killall jgmenu
   killall dunst
   killall xsettingsd
   xdotool key ctrl+shift+F5
@@ -36,6 +39,8 @@ else
   sed -i '/flavour = "/c\flavour = "mocha"' $NEOVIM
   sed -i "/@import 'colors\//c\@import 'colors\/mocha';" $EWW
   sed -i "/dunst -config/c\dunst -config ~\/.config\/bspwm\/apps\/dunst\/mocha-dunstrc &" $DUNST
+  sed -i "/conf_file=/c\conf_file=\$base/mocha-jgmenurc" $JGMENU
+  killall jgmenu
   killall dunst
   killall xsettingsd
   xdotool key ctrl+shift+F5

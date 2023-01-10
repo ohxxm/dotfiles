@@ -6,7 +6,7 @@ picom --config ~/.config/bspwm/apps/picom/picom.conf &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-dunst -config ~/.config/bspwm/apps/dunst/latte-dunstrc &
+dunst -config ~/.config/bspwm/apps/dunst/mocha-dunstrc &
 
 ~/.config/bspwm/apps/polybar/launch.sh &
 

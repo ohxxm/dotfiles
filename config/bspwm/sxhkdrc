@@ -19,8 +19,8 @@ super + shift + s
 #~button3
 #  jgmenu_run
 
-# ~button3
-  # xqp 0 $(xdo id -N Bspwm -n root) && killall jgmenu && jgmenu_run
+~button3
+  xqp 0 $(xdo id -N Bspwm -n root) && ~/.config/bspwm/apps/jgmenu/run
 
 # make sxhkd reload its configuration files:
 super + Escape

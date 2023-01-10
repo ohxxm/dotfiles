@@ -37,7 +37,6 @@
 # WIP
 * Migrate bar to EWW
 * EWW Dashboard
-* Add JGMENU
 
 # Credits
 
