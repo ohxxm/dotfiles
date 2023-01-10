@@ -41,4 +41,4 @@
 
 # Credits
 
-Manas140(https://github.com/Manas140) - Used his fetch script 
+<a href="https://github.com/Manas140">Manas140</a> - Used his fetch script 
