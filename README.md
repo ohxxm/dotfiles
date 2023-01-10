@@ -21,7 +21,11 @@
 
 **This command may overwrite your config files**
 <br>
-```cp -rf config/* ~/.config/```
+```cp -rf config/* ~/.config/ 
+   cp home/* ~/
+   cp bin/* /usr/local/bin/
+```
+**The last command may require superuser permissions**
 
 # Features
 * Hyprland-like animations in BSPWM using picom
@@ -32,3 +36,7 @@
 * Migrate bar to EWW
 * EWW Dashboard
 * Add JGMENU
+
+# Credits
+
+Manas140(https://github.com/Manas140) - Used his fetch script 
