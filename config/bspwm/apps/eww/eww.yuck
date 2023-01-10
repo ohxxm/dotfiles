@@ -4,43 +4,33 @@
     :space-evenly "false"
   (box :orientation "v"
     :space-evenly "false"
-    (profile)
+    (title)
     (theme_switch)
     )))
 
-(defpoll NAME :interval "5m" "whoami")
-(defpoll SWITCH_THEME :interval "1s" "~/.config/bspwm/apps/eww/scripts/watch_theme")
+(defpoll SWITCH_THEME "~/.config/bspwm/apps/eww/scripts/watch_theme")
 
-(defwidget profile []
-  (box 
-    :orientation "h"
-    :space-evenly "false"
-    :class "pfp" 
-    (label 
-      :text "Welcome ${NAME}"
-      :class "name"
-      )
-  )  
+(defwidget title []
+  (box
+    :class "title"
+  (label
+    :text "Theme Switcher"
+    )
+  )
 )
 
 (defwidget theme_switch []
   (box
-    :orientation "h"
+    :orientation "v"
     :space-evenly "false"
     :class "theme_switcher"
     (button
       :class "switch_theme_btn"
       :onclick "~/.config/bspwm/apps/eww/scripts/switch_theme"
-      "Switch to ${SWITCH_THEME} mode"
+      "Catppuccin ${SWITCH_THEME}"
     )
   )
 )
-
-(defwidget test1 []
-  (label
-    :text "Test1"
-    )
-  )
 
 (defwindow dashboard
     :monitor 0

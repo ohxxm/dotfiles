@@ -1,4 +1,4 @@
-@import 'colors/mocha';
+@import 'colors/latte';
 
 * {
   all: unset; //Unsets everything so you can style everything from scratch
@@ -9,6 +9,12 @@
   background-color: $base;
   color: $text;
   padding: 10px;
+}
+
+.title {
+  font-size: 2.5em;
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: Bold;
 }
 
 .name {
@@ -28,9 +34,9 @@
 }
 
 .switch_theme_btn {
-  background-color: $text;
-  color: $base;
+  background-color: $surface0;
+  color: $text;
   border-radius: 20px;
-  font-size: 1em;
+  font-size: 1.2em;
   padding: 10px;
 }

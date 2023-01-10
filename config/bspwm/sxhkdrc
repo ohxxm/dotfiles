@@ -33,7 +33,7 @@ super + shift + f
   firefox
 
 super + shift + d
-  thunar
+  nemo
 
 #
 # bspwm hotkeys

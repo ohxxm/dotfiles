@@ -2,9 +2,9 @@
 
 FILE=~/.cache/cached_theme
 
-if grep -q "dark" "$FILE"
+if grep -q "Dark" "$FILE"
   then
-    echo "light"
+    echo "Latte"
   else
-    echo "dark"
+    echo "Mocha"
 fi

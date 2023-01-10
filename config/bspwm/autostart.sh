@@ -6,10 +6,12 @@ picom --config ~/.config/bspwm/apps/picom/picom.conf &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-dunst -config ~/.config/bspwm/apps/dunst/dunstrc &
+dunst -config ~/.config/bspwm/apps/dunst/latte-dunstrc &
 
 ~/.config/bspwm/apps/polybar/launch.sh &
 
 eww daemon &
 
 nitrogen --restore &
+
+xsettingsd &
