@@ -16,6 +16,8 @@
 | Application Launcher | [`rofi`](https://github.com/davatorium/rofi)            |
 | Application Menu     | [`jgmenu`](https://github.com/johanmalm/jgmenu)         |
 
+[![Dotfiles in action!](https://github.com/Spaxly/dotfiles/assets/blob/main/Flow.mp4)]
+
 # Install
 ```yay -Syu $(cat config/bspwm/pkglist)```
 
