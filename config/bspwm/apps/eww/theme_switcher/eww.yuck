@@ -1,0 +1,116 @@
+(defwidget theme_switcher []
+  (box :orientation "v"
+    :space-evenly "false"
+    :class "theme_switcher"
+    (theme_switch)
+    )
+)
+
+(defwidget playerctl []
+  (box :orientation "v"
+    :space-evenly "false"
+    :halign "center"
+    :valign "center"
+    :class "music"
+    (music_title)
+    (music)
+    (music_art)
+    (music_controls)
+    ; (music)
+    )
+  )
+
+(defpoll SWITCH_THEME :interval "1s" "~/.config/bspwm/apps/eww/theme_switcher/scripts/watch_theme")
+(defpoll music :interval "1s" "scripts/player.sh")
+(defpoll art :interval "1s" "scripts/echoSongArt")
+(defpoll song_art :interval "1s" "scripts/getSongArt")
+(defpoll song_status :interval "1s" "scripts/playerStatus")
+
+(defwidget music_controls []
+ (box 
+   :orientation "h"
+   :class "music_controls"
+   :space-evenly "true"
+   ; :spacing 30
+   :halign "center"
+   :valign "center"
+   :hexpand "false"
+   :vexpand "false"
+   (button :class "previous_btn" :onclick "playerctl previous" "ﭢ")
+   (button :class "toggle-play" :onclick "playerctl play-pause" song_status)
+   (button :class "next_btn" :onclick "playerctl next" "ﭠ ")
+   ) 
+)
+
+(defwidget music_art []
+  (box :orientation "v"
+    :space-evenly "false"
+    ; :valign "center"
+    :halign "center"
+    :vexpand "false"
+    :hexpand "false"
+    :class "music_art"
+    :width 100
+    :height 330
+    :style "background-image: url('${art}')"
+    song_art
+    )
+  )
+
+(defwidget music_title []
+  (box :orientation "v"
+    :space-evenly "false"
+    (label 
+      :text "Now Playing"
+      :class "music_title"
+      )
+  )
+)
+
+(defwidget music []
+  (label 
+    :text "${music}"
+    :class "music_label"
+    :limit-width 30
+    ; :height 200
+    ; :width 390
+  )
+)
+
+(defwidget theme_switch []
+  (box
+    :orientation "v"
+     (label :text "Theme Switcher" :class "title")
+  (box
+    :orientation "v"
+    :space-evenly "false"
+    (button
+      :class "switch_theme_btn"
+      :onclick "~/.config/bspwm/apps/eww/theme_switcher/scripts/switch_theme"
+      "Catppuccin ${SWITCH_THEME}"
+      )
+    )
+  )
+)
+
+(defwindow music
+  :monitor 0
+  :geometry (geometry :x "13"
+                      :y "280"
+                      ; :width "10%"
+                      ; :height "10%"
+                      :anchor "top left")
+  :windowtype "dock"
+  :wm-ignore true
+  (playerctl))
+
+(defwindow theme_switcher
+    :monitor 0
+    :geometry (geometry :x "13"
+                        :y "80"
+                        ; :height "30%"
+                        ; :width "15%"
+                        :anchor "top left")
+    :windowtype "dock"
+    :wm-ignore true
+(theme_switcher))

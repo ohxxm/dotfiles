@@ -1,0 +1,107 @@
+@import 'colors/mocha';
+
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+}
+
+//Global Styles
+.bar {
+  background-color: $base;
+  color: $text;
+  padding: 5px;
+}
+
+.left {
+  padding-left: 5px;
+}
+
+.center {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.right {
+  padding-right: 5px;
+}
+
+scale trough {
+  all: unset;
+  background-color: $surface0;
+  border-radius: 20px;
+  min-height: 20px;
+  min-width: 100px;
+  margin: 0.3rem 0 0.3rem 0.1rem;
+}
+
+.volbar trough highlight {
+  background: linear-gradient($red, $mauve, $blue, $sky);
+  border-radius: 20px;
+}
+
+.dots {
+  color: $overlay2;
+  font-size: 1.3em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.launcher {
+  font-family: "Iosevka Nerd Font";
+  color: #1793d1;
+  font-size: 1.8em;
+}
+
+.music {
+  font-family: "SauceCodePro Nerd Font";
+  font-size: 1.1em;
+  padding: 10px;
+  font-weight: Bold;
+  border-radius: 15px;
+  color: $green;
+  background-color: $surface0;
+}
+
+.time {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 1.3em;
+  color: $blue; 
+  background-color: $surface0;
+  padding: 8px;
+  border-radius: 15px;
+}
+
+// Workspaces
+.works {
+  font-family: "Iosevka Nerd Font";
+  // padding: .2rem .7rem .2rem .7rem;
+  background-color: $surface0;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.0 , .01, .02, .03, .04, .05, .06,
+.011, .022, .033, .044, .055, .066{
+}
+
+/* Unoccupied */
+.0 {
+  color: $text;
+  font-size: 0.6em;
+}
+
+/* Occupied */
+.01, .02, .03, .04, .05, .06 {
+  color: $blue;
+  font-size: 0.8em;
+}
+
+/* Focused */
+.011,
+.022,
+.033,
+.044,
+.055,
+.066 {
+  color: $yellow;
+  font-size: 1.2em;
+}

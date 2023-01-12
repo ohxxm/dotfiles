@@ -1,0 +1,10 @@
+#!/bin/bash
+
+FILE=~/.cache/cached_theme
+
+if grep -q "Dark" "$FILE"
+  then
+    echo "Latte"
+  else
+    echo "Mocha"
+fi

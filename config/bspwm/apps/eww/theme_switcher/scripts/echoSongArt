@@ -1,0 +1,9 @@
+#!/bin/bash
+
+s=$(playerctl status)
+
+if [[ $s == "Playing" ]]; then
+  echo "$HOME/.cache/eww/spotify/temp.png"
+else
+  echo ""
+fi

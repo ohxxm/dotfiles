@@ -1,0 +1,12 @@
+#!/bin/sh
+
+FILE="$HOME/.cache/eww_launch.theme_switcher"
+EWW=`which eww`
+
+if [[ ! -f "$FILE" ]]; then
+	touch "$FILE"
+  eww -c ~/.config/bspwm/apps/eww/theme_switcher/ open theme_switcher
+else
+	${EWW} -c ~/.config/bspwm/apps/eww/theme_switcher/ close theme_switcher
+	rm "$FILE"
+fi

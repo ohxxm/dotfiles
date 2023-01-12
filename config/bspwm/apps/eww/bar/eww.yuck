@@ -1,0 +1,113 @@
+(defwidget bar []
+  (box 
+    :class "bar"
+    :orientation "h"
+    (left)
+    (center)
+    (right)))
+
+(defwidget left []
+  (box
+  :orientation "h"
+  :halign "start"
+  :valign "center"
+  :space-evenly "false"
+  :class "left"
+    (launch_theme_switcher)
+    (dots)
+    (music)
+    (volum)
+  ))
+
+(defwidget center []
+  (box
+  :orientation "v"
+  :halign "center"
+  :valign "center"
+  :space-evenly "false"
+  :class "center"
+  (workspaces)
+  ))
+
+(defwidget right []
+  (box
+  :orientation "v"
+  :halign "end"
+  :valign "center"
+  :space-evenly "false"
+  :class "right"
+  (time)))
+
+(defwidget workspaces []
+	(literal :content workspace))
+(deflisten workspace "scripts/workspaces")
+
+(defwidget dots []
+  (label 
+    :class "dots"
+    :text ""
+    )
+)
+
+(defwidget launch_theme_switcher []
+  (button 
+    :class "launcher"
+    :onclick "~/.config/bspwm/apps/eww/ewwDashboard"
+    " "
+    )
+  )
+
+(defpoll time :interval "1s" `date "+%I:%M %p"`)
+
+(defwidget time []
+  (label 
+    :class "time"
+    :text " ${time}"
+    )
+  )
+
+(defpoll playerctl :interval "1s" "scripts/player.sh")
+
+(defwidget music []
+  (box
+    (label 
+      :class "music"
+      :text " ${playerctl}"
+      :limit-width 20
+    )
+  )
+)
+
+(defpoll volumen :interval "1s" "scripts/volume.sh --percentage")
+(defpoll volume_value :interval "1s" "scripts/volume.sh --vol")
+(defpoll volume_icon :interval "1s" "scripts/volume.sh --icon")
+
+;; Volume Widgets ;;
+(defwidget volum []
+	(eventbox :onhover "eww -c ~/.config/bspwm/apps/eww/bar/ update volum=true" 		
+			  :onhoverlost "eww -c ~/.config/bspwm/apps/eww/bar/ update volum=false"
+	(box      :orientation "h" 	  
+			  :space-evenly "false" 
+			  :spacing "10"
+    (label :text "Vol: ")
+    (scale    :class "volbar" 	  
+			  :value volume_value
+			  :onchange "scripts/volume.sh set {}"
+			  :orientation "h"      
+			  :flipped false 
+			  :tooltip "Volume: ${volumen}" 
+			  :max 101 
+			  :min 0))
+	))			  
+(defvar volum false)
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "5px"
+                      :width "99%"
+                      :height "60px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "4%")
+  (bar))

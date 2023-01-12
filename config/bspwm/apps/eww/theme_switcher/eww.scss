@@ -1,0 +1,71 @@
+@import 'colors/mocha';
+
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+}
+
+//Global Styles
+.theme_switcher {
+  background-color: $base;
+  // color: $text;
+  padding: 1rem;
+}
+
+.music {
+  background-color: $base;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2.5em;
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: Bold;
+  background-color: $base;
+  color: $text;
+  padding: 10px;
+}
+
+.switch_theme_btn {
+  background-color: $surface0;
+  color: $text;
+  border-radius: 20px;
+  font-size: 1.2em;
+  padding: 10px;
+  margin: 10px;
+}
+
+.music_title {
+  font-size: 2.5em;
+  font-family: JetBrainsMono Nerd Font; 
+  font-weight: Bold;
+  color: $text;
+  // padding: 10px;
+}
+
+.music_label {
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: Bold;
+  font-size: 1.2em;
+  padding: 10px;
+  color: $text;
+  // margin: 10px;
+}
+
+.music_art {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  min-width: 360px;
+  // min-height: 100px;
+}
+
+.music_controls {
+  font-size: 2em;
+  color: $blue;
+  font-family: JetBrainsMono Nerd Font;
+  margin: 10px;
+}
+
+.next_btn {
+  margin-right: 50px;
+}
