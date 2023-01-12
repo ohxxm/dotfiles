@@ -16,6 +16,7 @@
 | Application Launcher | [`rofi`](https://github.com/davatorium/rofi)            |
 | Application Menu     | [`jgmenu`](https://github.com/johanmalm/jgmenu)         |
 
+<h1 align="center">Dotfiles in action!</h1>
 https://user-images.githubusercontent.com/68564017/212144838-20e760b7-c5c6-427d-8828-660568d47a20.mp4
 
 # Install
