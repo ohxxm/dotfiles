@@ -16,15 +16,36 @@
     (music)
     (music_art)
     (music_controls)
+    (volume_slider)
     ; (music)
     )
   )
+
+(deflisten vol "scripts/volume.sh --vol")
+(defpoll vol_percentage :interval "0.1s" "scripts/volume.sh --percentage")
+
+(defwidget volume_slider []
+  (box :orientation "h"
+    :class "volume-main"
+    :space-evenly "false"
+    (label :class "vol_percentage" 
+           :text "${vol_percentage} ")
+    (scale :class "volume-slider"
+      :value {vol == "" ? 0 : vol}
+      ; :value vol
+      :orientation "h"
+      :width 260
+      :max 101
+      :min 0
+      :marks true
+      :onchange "scripts/volume.sh set {}")
+  ))
 
 (defpoll SWITCH_THEME :interval "1s" "~/.config/bspwm/apps/eww/theme_switcher/scripts/watch_theme")
 (defpoll music :interval "1s" "scripts/player.sh")
 (defpoll art :interval "1s" "scripts/echoSongArt")
 (defpoll song_art :interval "1s" "scripts/getSongArt")
-(defpoll song_status :interval "1s" "scripts/playerStatus")
+(defpoll song_status :interval "0.5s" "scripts/playerStatus")
 
 (defwidget music_controls []
  (box 
@@ -37,7 +58,7 @@
    :hexpand "false"
    :vexpand "false"
    (button :class "previous_btn" :onclick "playerctl previous" "ﭢ")
-   (button :class "toggle-play" :onclick "playerctl play-pause" song_status)
+   (button :class "toggle_play" :onclick "playerctl play-pause" song_status)
    (button :class "next_btn" :onclick "playerctl next" "ﭠ ")
    ) 
 )
@@ -45,10 +66,10 @@
 (defwidget music_art []
   (box :orientation "v"
     :space-evenly "false"
-    ; :valign "center"
+    :valign "center"
     :halign "center"
-    :vexpand "false"
-    :hexpand "false"
+    ; :vexpand "true"
+    ; :hexpand "true"
     :class "music_art"
     :width 100
     :height 330
@@ -71,7 +92,7 @@
   (label 
     :text "${music}"
     :class "music_label"
-    :limit-width 30
+    :limit-width 20
     ; :height 200
     ; :width 390
   )
@@ -92,6 +113,17 @@
     )
   )
 )
+
+; (defwindow vol
+  ; :monitor 0
+  ; :geometry (geometry :x "13"
+                      ; :y "830"
+                      ; :width "10%"
+                      ; :height "10%"
+                      ; :anchor "top left")
+  ; :windowtype "dock"
+  ; :wm-ignore true
+  ; (vol_slider))
 
 (defwindow music
   :monitor 0

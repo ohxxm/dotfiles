@@ -3,7 +3,9 @@
 s=$(playerctl status)
 
 if [[ $s == "Playing" ]]; then
-  echo "$HOME/.cache/eww/spotify/temp.png"
-else
-  echo ""
+    echo "$HOME/.cache/eww/spotify/temp.png"
+  elif [[ $s == "Paused" ]]; then
+    echo "$HOME/.cache/eww/spotify/temp.png"
+  else
+    echo ""
 fi

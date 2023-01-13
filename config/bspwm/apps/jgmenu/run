@@ -6,4 +6,5 @@ menu_file=$base/menu.txt
 conf_file=$base/mocha-jgmenurc
 
 killall jgmenu
+rm ~/.jgmenu-lockfile
 jgmenu --csv-file=$menu_file --config-file=$conf_file

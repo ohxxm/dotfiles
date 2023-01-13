@@ -21,9 +21,9 @@ get_percentage () {
 get_icon () {
   local vol=$(get_percentage)
   if [[ $vol == "0%" ]]; then
-    echo "icons/mute.png"
+    echo "~/.config/bspwm/apps/eww/theme_switcher/assets/mute.jpg"
   else
-    echo "icons/volume.png"
+    echo "~/.config/bspwm/apps/eww/theme_switcher/assets/volume.jpg"
   fi
 }
 

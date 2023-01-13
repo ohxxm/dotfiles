@@ -66,6 +66,40 @@
   margin: 10px;
 }
 
+.toggle_play {
+  font-size: 1.2em;
+}
+
+.previous_btn {
+  font-size: 0.8em;
+}
+
 .next_btn {
   margin-right: 50px;
+  font-size: 0.8em;
+}
+
+.volume-slider trough {
+  padding: 0.5em;
+  background-color: $surface0;
+  border-radius: 15px;
+}
+
+.volume-slider highlight {
+  padding: 0.5em;
+  background-color: $blue;
+  border-radius: 15px;
+}
+
+.vol_btn {
+  background-repeat: no-repeat;
+  background-size: 25px;
+  min-height: 25px;
+  min-width: 10px;
+}
+
+.vol_percentage {
+  font-family: Iosevka Nerd Font;
+  color: $text;
+  font-size: 1.3em;
 }
