@@ -23,6 +23,7 @@ https://user-images.githubusercontent.com/68564017/212144838-20e760b7-c5c6-427d-
 <br>
 ```yay -Syu $(cat config/bspwm/pkglist)```
 <br>
+<br>
 **This command may overwrite your config files**
 <br>
 <br>
