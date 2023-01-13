@@ -19,15 +19,19 @@
 https://user-images.githubusercontent.com/68564017/212144838-20e760b7-c5c6-427d-8828-660568d47a20.mp4
 
 # Install
+```git clone https://github.com/Spaxly/dotfiles```
+<br>
 ```yay -Syu $(cat config/bspwm/pkglist)```
-
+<br>
 **This command may overwrite your config files**
+<br>
 <br>
 ```cp -rf config/* ~/.config/``` 
 <br>
 ```cp home/* ~/```
 <br>
 ```cp bin/* /usr/local/bin/```
+<br>
 <br>
 **The last command may require superuser permissions**
 
