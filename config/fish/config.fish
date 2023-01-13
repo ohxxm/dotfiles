@@ -3,4 +3,9 @@ starship init fish | source
 fetch -c ~/.config/hypr/apps/fetch/conf
 
 alias ls="exa --icons -l"
-alias cat="bat"
+
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        exec startx /bin/bspwm -- -keeptty
+    end
+end

@@ -11,10 +11,11 @@
     :space-evenly "false"
     :halign "center"
     :valign "center"
+    :width 390
     :class "music"
     (music_title)
     (music)
-    (music_art)
+    ; (music_art)
     (music_controls)
     (volume_slider)
     ; (music)
@@ -28,6 +29,7 @@
   (box :orientation "h"
     :class "volume-main"
     :space-evenly "false"
+    :halign "center"
     (label :class "vol_percentage" 
            :text "${vol_percentage} ")
     (scale :class "volume-slider"
