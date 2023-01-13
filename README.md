@@ -3,6 +3,8 @@
 <h3 align="center">If you decide to use my config, please do give me credit in the README of your fork/repo.</center>
 <br>
 
+https://user-images.githubusercontent.com/68564017/212144838-20e760b7-c5c6-427d-8828-660568d47a20.mp4
+
 | Feature              | Package                                                 |
 | -------------------- | ------------------------------------------------------- |
 | Window Manager       | [`bspwm`](https://github.com/baskerville/bspwm)         |
@@ -15,8 +17,6 @@
 | Notification Manager | [`dunst`](https://github.com/dunst-project/dunst)       |
 | Application Launcher | [`rofi`](https://github.com/davatorium/rofi)            |
 | Application Menu     | [`jgmenu`](https://github.com/johanmalm/jgmenu)         |
-
-https://user-images.githubusercontent.com/68564017/212144838-20e760b7-c5c6-427d-8828-660568d47a20.mp4
 
 # Install
 ```git clone https://github.com/Spaxly/dotfiles```
