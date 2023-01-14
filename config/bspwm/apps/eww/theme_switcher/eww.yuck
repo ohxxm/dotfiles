@@ -18,9 +18,94 @@
     ; (music_art)
     (music_controls)
     (volume_slider)
-    ; (music)
     )
   )
+
+(defwidget stats []
+  (box :orientation "v"
+    :space-evenly false
+    ; :halign "center"
+    ; :valign "center"
+    :width 390
+    :class "stats"
+    (stats_title)
+    (ram-circular)
+    (cpu-circular)
+    )
+  )
+
+(defwidget stats_title []
+  (box 
+    :orientation "h"
+    :spacing 0
+    (label 
+      :text "Resources"
+      :class "statsTitle"
+      )
+    )
+  )
+
+(defwidget radialmeter [value text ?class ?labelclass]
+    (circular-progress :value value
+        :class "radial ${class}"
+        :start-angle 0
+        :thickness 12
+        (label :text text
+            :class "radial-label ${labelclass}"
+            :limit-width 2
+            :show_truncated false
+            :wrap false
+            :angle 0.0)))
+
+(defpoll ramUsage :interval "1s" "scripts/getRam")
+(defpoll cpuUsage :interval "1s" "scripts/getCpu")
+
+(defwidget ram-circular []
+  (box 
+    :spacing 0
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    :class "ram_box"
+    (box 
+      :spacing 0
+      :orientation "h"
+      :space-evenly false
+      :class "ram"
+      :halign "center"
+      :tooltip "Usage: ${ramUsage}%"
+  (radialmeter
+    :value ramUsage
+    :text " "
+    :labelclass "ram-label"
+    :class "ram-circle"
+      )
+    )
+  )
+)
+
+(defwidget cpu-circular []
+  (box 
+    :spacing 0
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+    (box 
+      :spacing 0
+      :orientation "h"
+      :space-evenly false
+      :halign "center"
+      :class "cpu"
+      :tooltip "Usage: ${cpuUsage}%"
+  (radialmeter
+    :value cpuUsage
+    :text " "
+    :labelclass "cpu-label"
+    :class "cpu-circle"
+      )
+    )
+  )
+)
 
 (deflisten vol "scripts/volume.sh --vol")
 (defpoll vol_percentage :interval "0.1s" "scripts/volume.sh --percentage")
@@ -116,16 +201,16 @@
   )
 )
 
-; (defwindow vol
-  ; :monitor 0
-  ; :geometry (geometry :x "13"
-                      ; :y "830"
+(defwindow resourceUsage
+  :monitor 0
+  :geometry (geometry :x "13"
+                      :y "540"
                       ; :width "10%"
                       ; :height "10%"
-                      ; :anchor "top left")
-  ; :windowtype "dock"
-  ; :wm-ignore true
-  ; (vol_slider))
+                      :anchor "top left")
+  :windowtype "dock"
+  :wm-ignore true
+  (stats))
 
 (defwindow music
   :monitor 0

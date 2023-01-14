@@ -7,13 +7,26 @@
 //Global Styles
 .theme_switcher {
   background-color: $base;
-  // color: $text;
   padding: 1rem;
 }
 
 .music {
   background-color: $base;
   padding: 1rem;
+}
+
+.stats {
+  padding: 1rem;
+  background-color: $base;
+}
+
+.statsTitle {
+  font-size: 2.5em;
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: Bold;
+  background-color: $base;
+  color: $text;
+  padding: 10px;
 }
 
 .title {
@@ -24,6 +37,7 @@
   color: $text;
   padding: 10px;
 }
+
 
 .switch_theme_btn {
   background-color: $surface0;
@@ -102,4 +116,44 @@
   font-family: Iosevka Nerd Font;
   color: $text;
   font-size: 1.3em;
+}
+
+.ram_box {
+  padding: 1em;
+}
+
+.ram-label {
+  padding: 1em;
+  font-family: Iosevka Nerd Font;
+  color: $red;
+  font-size: 2em;
+}
+
+.ram {
+  background-color: $surface0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.ram-circle {
+  color: $red;
+  background-color: $surface2;
+}
+
+.cpu-label {
+  padding: 1em;
+  font-family: Iosevka Nerd Font;
+  color: $green;
+  font-size: 2em;
+}
+
+.cpu {
+  background-color: $surface0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.cpu-circle {
+  color: $green;
+  background-color: $surface2;
 }
