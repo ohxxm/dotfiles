@@ -1,4 +1,12 @@
-<h1 align="center">Dotfiles!</h1>
+```ocaml
+Spaxly's Dotfiles
+```
+<br>
+
+```ocaml
+FUNCTIONAL / COMFY / AESTHETIC
+```
+
 
 <h3 align="center">If you decide to use my config, please do give me credit in the README of your fork/repo.</center>
 <br>
