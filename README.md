@@ -1,3 +1,6 @@
+<div align="center">
+
+
 ```ocaml
 Spaxly's Dotfiles
 ```
@@ -6,7 +9,7 @@ Spaxly's Dotfiles
 ```ocaml
 FUNCTIONAL / COMFY / AESTHETIC
 ```
-
+</div>
 
 <h3 align="center">If you decide to use my config, please do give me credit in the README of your fork/repo.</center>
 <br>
