@@ -44,7 +44,7 @@
   ))
 
 (defpoll SWITCH_THEME :interval "1s" "~/.config/bspwm/apps/eww/theme_switcher/scripts/watch_theme")
-(defpoll music :interval "1s" "scripts/player.sh")
+(defpoll music :interval "0.1s" "scripts/player.sh")
 (defpoll art :interval "1s" "scripts/echoSongArt")
 (defpoll song_art :interval "1s" "scripts/getSongArt")
 (defpoll song_status :interval "0.5s" "scripts/playerStatus")

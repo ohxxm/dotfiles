@@ -16,9 +16,6 @@ super + shift + s
   flameshot gui
   # sh ~/.config/bspwm/rofi/bin/screenshot
 
-super + a
-  sh ~/run_script
-
 #~button3
 #  jgmenu_run
 
