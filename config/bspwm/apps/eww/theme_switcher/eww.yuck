@@ -29,10 +29,16 @@
     :width 390
     :class "stats"
     (stats_title)
+  (box :orientation "h"
+    :space-evenly false
+    :halign "center"
+    :spacing 20
+    :class "stats"
     (ram-circular)
     (cpu-circular)
     )
   )
+)
 
 (defwidget stats_title []
   (box 
@@ -66,7 +72,6 @@
     :orientation "h"
     :space-evenly false
     :halign "center"
-    :class "ram_box"
     (box 
       :spacing 0
       :orientation "h"
@@ -129,10 +134,10 @@
   ))
 
 (defpoll SWITCH_THEME :interval "1s" "~/.config/bspwm/apps/eww/theme_switcher/scripts/watch_theme")
-(defpoll music :interval "0.1s" "scripts/player.sh")
-(defpoll art :interval "1s" "scripts/echoSongArt")
-(defpoll song_art :interval "1s" "scripts/getSongArt")
-(defpoll song_status :interval "0.5s" "scripts/playerStatus")
+(defpoll music :interval "0.1s" "scripts/player.sh --song_name")
+(defpoll art :interval "1s" "scripts/player.sh --song_art")
+(defpoll song_art :interval "1s" "scripts/player.sh --get_song_art")
+(defpoll song_status :interval "0.5s" "scripts/player.sh --status_icon")
 
 (defwidget music_controls []
  (box 
