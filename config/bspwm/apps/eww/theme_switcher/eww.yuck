@@ -18,6 +18,7 @@
     ; (music_art)
     (music_controls)
     (volume_slider)
+    (pulseaudio_eq)
     )
   )
 
@@ -139,6 +140,20 @@
 (defpoll song_art :interval "1s" "scripts/player.sh --get_song_art")
 (defpoll song_status :interval "0.5s" "scripts/player.sh --status_icon")
 
+(defwidget pulseaudio_eq []
+  (box 
+    :orientation "h"
+    :class "pulseaudio_eq"
+    :space-evenly "false"
+    :halign "center"
+    :valign "center"
+  (button
+    :onclick "pulseaudio-equalizer toggle"
+    "Toggle EQ"
+    )
+  )
+)
+
 (defwidget music_controls []
  (box 
    :orientation "h"
@@ -209,7 +224,7 @@
 (defwindow resourceUsage
   :monitor 0
   :geometry (geometry :x "13"
-                      :y "540"
+                      :y "590"
                       ; :width "10%"
                       ; :height "10%"
                       :anchor "top left")
