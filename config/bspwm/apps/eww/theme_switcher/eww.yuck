@@ -15,7 +15,7 @@
     :class "music"
     (music_title)
     (music)
-    ; (music_art)
+    (music_art)
     (music_controls)
     (volume_slider)
     (pulseaudio_eq)
@@ -224,7 +224,7 @@
 (defwindow resourceUsage
   :monitor 0
   :geometry (geometry :x "13"
-                      :y "590"
+                      :y "900"
                       ; :width "10%"
                       ; :height "10%"
                       :anchor "top left")
