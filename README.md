@@ -2,7 +2,7 @@
 
 
 ```ocaml
-Spaxly's Dotfiles
+ohxxm's Dotfiles
 ```
 <br>
 
@@ -30,7 +30,7 @@ https://user-images.githubusercontent.com/68564017/212144838-20e760b7-c5c6-427d-
 | Application Menu     | [`jgmenu`](https://github.com/johanmalm/jgmenu)         |
 
 # Install
-```git clone https://github.com/Spaxly/dotfiles```
+```git clone https://github.com/ohxxm/dotfiles```
 <br>
 ```yay -Syu $(cat config/bspwm/pkglist)```
 <br>
